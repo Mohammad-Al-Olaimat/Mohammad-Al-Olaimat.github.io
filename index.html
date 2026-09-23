@@ -1,22 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mohammad Al Olaimat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mohammad Al Olaimat | AI & Biomedical Informatics</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #071426;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 30px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 10%;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 80% 40%,
+                rgba(37, 99, 235, 0.25),
+                transparent 35%),
+                linear-gradient(135deg, #071426, #0c2340);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro {
+            color: #6fb7ff;
+            font-size: 18px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(52px, 7vw, 95px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: clamp(24px, 3vw, 40px);
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            max-width: 700px;
+            color: #c7d4e5;
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .primary {
+            background: #3182f6;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #8298b4;
+            color: white;
+        }
+
+        /* SECTIONS */
+        section.content {
+            background: white;
+            color: #172033;
+            padding: 90px 10%;
+        }
+
+        section.content h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        section.content p {
+            max-width: 850px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #536174;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            nav {
+                padding: 25px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 25px 60px;
+            }
+
+            h1 {
+                font-size: 52px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Mohammad Al Olaimat</h1>
+<nav>
+    <div class="logo">MAO.</div>
 
-    <h2>AI & Biomedical Informatics Researcher</h2>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <div class="intro">Research · AI · Biomedical Informatics</div>
+
+        <h1>Mohammad<br>Al Olaimat</h1>
+
+        <div class="title">
+            AI & Biomedical Informatics Researcher
+        </div>
+
+        <p class="description">
+            Advancing aging and Alzheimer's disease research through
+            artificial intelligence, machine learning, multimodal health
+            data, and biomedical informatics.
+        </p>
+
+        <div class="buttons">
+            <a href="#research" class="button primary">
+                Explore My Research
+            </a>
+
+            <a href="#contact" class="button secondary">
+                Contact Me
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<section class="content" id="about">
+
+    <h2>About Me</h2>
 
     <p>
-        Machine Learning | Multimodal Health Data | Aging & AD/ADRD
+        I am a researcher working at the intersection of artificial
+        intelligence, biomedical informatics, aging, and Alzheimer's
+        disease and related dementias. My research focuses on using
+        machine learning and multimodal health data to develop
+        computational approaches for understanding health and
+        disease trajectories.
     </p>
 
-    <p>
-        Welcome to my personal research website.
-    </p>
+</section>
 
 </body>
 </html>
