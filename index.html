@@ -1,27 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Mohammad Al Olaimat, PhD — Assistant Research Professor at the University of South Florida. Research in AI, biomedical informatics, and aging.">
-<title>Mohammad Al Olaimat, PhD | Biomedical AI Research</title>
-<style>
-:root{--ink:#17212d;--muted:#596677;--line:#e2e8ee;--accent:#165d91}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:#fff}a{color:var(--accent)}a:focus-visible{outline:3px solid #75b5ec;outline-offset:4px}.container{width:min(1120px,88%);margin:auto}nav{border-bottom:1px solid var(--line);padding:22px 0}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:750;color:var(--ink);text-decoration:none;font-size:19px}.nav-links{display:flex;gap:23px;flex-wrap:wrap}.nav-links a{font-size:14px;text-decoration:none;color:var(--muted)}.nav-links a:hover{color:var(--accent)}.hero{padding:85px 0 95px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(210px,.7fr);align-items:center;gap:75px}.eyebrow,.section-label,.number,.project-tag{font:13px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;color:#687989}h1{font-size:clamp(43px,5.8vw,78px);line-height:1.05;letter-spacing:-2.5px;margin:16px 0 19px}h2{font-size:36px;line-height:1.2;letter-spacing:-1px;margin:10px 0 32px}.subtitle{font-size:22px;color:#3e4b5b;margin:0 0 9px}.affiliation{font-size:15px;color:var(--muted);margin:0 0 22px}.intro{max-width:710px;color:var(--muted);font-size:17px;margin:0 0 24px}.profile-photo{width:100%;max-width:300px;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:5px;justify-self:end}.social{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.social a{display:inline-block;padding:8px 13px;border:1px solid #d6dfe6;border-radius:5px;text-decoration:none;font-size:14px;font-weight:600}.social a:hover{background:#eef5fb}.social .unavailable{padding:8px 13px;color:#8894a1;border:1px dashed #d6dfe6;border-radius:5px;font-size:14px;cursor:default}section{padding:78px 0;border-top:1px solid var(--line)}.research-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{padding:27px;border:1px solid var(--line);border-radius:5px}.card h3,.project h3{font-size:20px;line-height:1.4;margin:15px 0 8px}.card p,.project p,.note{color:var(--muted);margin:0}.project{display:grid;grid-template-columns:170px 1fr;gap:20px;border-top:1px solid var(--line);padding:23px 0}.project:last-child{border-bottom:1px solid var(--line)}.project h3{margin:0 0 8px}.publication{border-top:1px solid var(--line);padding:20px 0}.publication strong{display:block;font-size:17px}.publication span{color:var(--muted);font-size:14px}.contact-email{font-size:18px;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:28px 0;color:#758291;font-size:13px}@media(max-width:800px){.nav-inner{align-items:flex-start;flex-direction:column}.hero-grid{grid-template-columns:1fr;gap:35px}.profile-photo{justify-self:start;max-width:230px}.research-grid{grid-template-columns:1fr}.project{grid-template-columns:1fr;gap:5px}section{padding:55px 0}.hero{padding:55px 0}h1{letter-spacing:-1.5px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mohammad Al Olaimat, PhD — Assistant Research Professor at the University of South Florida. Research in AI, biomedical informatics, and aging.">
+    <title>Mohammad Al Olaimat, PhD | Biomedical AI Research</title>
+
+    <style>
+        /* ===== COLORS AND GLOBAL SETTINGS ===== */
+        :root {
+            --ink: #17212d;
+            --muted: #596677;
+            --line: #e2e8ee;
+            --accent: #165d91;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font: 16px/1.7 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--ink);
+            background: #fff;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        a:focus-visible {
+            outline: 3px solid #75b5ec;
+            outline-offset: 4px;
+        }
+
+        .container {
+            width: min(1120px, 88%);
+            margin: auto;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            border-bottom: 1px solid var(--line);
+            padding: 22px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            font-weight: 750;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 19px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 23px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            text-decoration: none;
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== INTRODUCTION / HERO ===== */
+        .hero {
+            padding: 85px 0 95px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.65fr) minmax(210px, .7fr);
+            align-items: center;
+            gap: 75px;
+        }
+
+        .eyebrow,
+        .section-label,
+        .number,
+        .project-tag {
+            font: 13px/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
+            color: #687989;
+        }
+
+        h1 {
+            font-size: clamp(43px, 5.8vw, 78px);
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            margin: 16px 0 19px;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin: 10px 0 32px;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #3e4b5b;
+            margin: 0 0 9px;
+        }
+
+        .affiliation {
+            font-size: 15px;
+            color: var(--muted);
+            margin: 0 0 22px;
+        }
+
+        .intro {
+            max-width: 710px;
+            color: var(--muted);
+            font-size: 17px;
+            margin: 0 0 24px;
+        }
+
+        .profile-photo {
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 5px;
+            justify-self: end;
+        }
+
+        /* ===== PROFILE LINKS ===== */
+        .social {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .social a {
+            display: inline-block;
+            padding: 8px 13px;
+            border: 1px solid #d6dfe6;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .social a:hover {
+            background: #eef5fb;
+        }
+
+        .social .unavailable {
+            padding: 8px 13px;
+            color: #8894a1;
+            border: 1px dashed #d6dfe6;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: default;
+        }
+
+        /* ===== CONTENT SECTIONS ===== */
+        section {
+            padding: 78px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 27px;
+            border: 1px solid var(--line);
+            border-radius: 5px;
+        }
+
+        .card h3,
+        .project h3 {
+            font-size: 20px;
+            line-height: 1.4;
+            margin: 15px 0 8px;
+        }
+
+        .card p,
+        .project p,
+        .note {
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* ===== RESEARCH PROJECTS ===== */
+        .project {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 20px;
+            border-top: 1px solid var(--line);
+            padding: 23px 0;
+        }
+
+        .project:last-child {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .project h3 {
+            margin: 0 0 8px;
+        }
+
+        /* ===== PUBLICATIONS ===== */
+        .publication {
+            border-top: 1px solid var(--line);
+            padding: 20px 0;
+        }
+
+        .publication strong {
+            display: block;
+            font-size: 17px;
+        }
+
+        .publication span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .publication-note {
+            margin-top: 24px;
+        }
+
+        /* ===== CONTACT AND FOOTER ===== */
+        .contact-email {
+            font-size: 18px;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 28px 0;
+            color: #758291;
+            font-size: 13px;
+        }
+
+        /* ===== MOBILE LAYOUT ===== */
+        @media (max-width: 800px) {
+            .nav-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .profile-photo {
+                justify-self: start;
+                max-width: 230px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .hero {
+                padding: 55px 0;
+            }
+
+            h1 {
+                letter-spacing: -1.5px;
+            }
+        }
+    </style>
 </head>
 <body>
-<nav><div class="container nav-inner"><a class="brand" href="#top">Mohammad Al Olaimat</a><div class="nav-links"><a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#publications">Publications</a><a href="#contact">Contact</a></div></div></nav>
-<header class="hero" id="top"><div class="container hero-grid"><div id="about"><div class="eyebrow">// AI · Biomedical Informatics · Aging</div><h1>Mohammad<br>Al Olaimat, PhD</h1><p class="subtitle">Assistant Research Professor</p><p class="affiliation">University of South Florida · Bellini College of AI, Cybersecurity & Computing · CITA</p><p class="intro">I develop AI and biomedical informatics methods for multimodal health data, real-world clinical data, aging, and Alzheimer's disease and related dementias. My work spans computational phenotyping, longitudinal EHR modeling, and machine learning for biomedical discovery.</p><div class="social"><a href="https://scholar.google.com/citations?user=waVA4f0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href="<a href="https://orcid.org/YOUR-ORCID-ID"
-   target="_blank"
-   rel="noopener noreferrer">
-   ORCID ↗
-</a>"
-   target="_blank"
-   rel="noopener noreferrer">
-   ORCID ↗
-</a><a href="Mohammad_Al_Olaimat_CV.docx" download>Download CV ↓</a><a href="https://www.linkedin.com/in/mohammad-al-olaimat-b0a17bb2" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:mohammadalolaimat@usf.edu">Email ↗</a></div></div><img class="profile-photo" src="mohammad.jpeg" alt="Portrait of Mohammad Al Olaimat"></div></header>
-<section id="research"><div class="container"><div class="section-label">// research</div><h2>Research Areas</h2><div class="research-grid"><article class="card"><div class="number">01</div><h3>AI for Aging & AD/ADRD</h3><p>Computational methods to investigate cognitive impairment, Alzheimer's disease, and aging-related health trajectories.</p></article><article class="card"><div class="number">02</div><h3>Multimodal Health Data</h3><p>Integration of EHRs, imaging, biomarkers, genetics, and omics for biomedical research.</p></article><article class="card"><div class="number">03</div><h3>Computational Phenotyping</h3><p>Clinical data harmonization, intrinsic capacity phenotyping, and longitudinal analysis of real-world data.</p></article><article class="card"><div class="number">04</div><h3>Machine Learning & Deep Learning</h3><p>Transformers, graph neural networks, recurrent networks, and language-based methods for clinical data.</p></article></div></div></section>
-<section id="projects"><div class="container"><div class="section-label">// selected work</div><h2>Research Projects</h2><div class="project"><div class="project-tag">AGING / EHR</div><div><h3>Intrinsic Capacity Phenotyping</h3><p>Developing clinically grounded computational measures of intrinsic capacity from real-world long-term care data.</p></div></div><div class="project"><div class="project-tag">MULTIMODAL AI</div><div><h3>ADNI & HABS-HD Research</h3><p>Analyzing clinical, cognitive, biomarker, imaging, and molecular data across aging research cohorts.</p></div></div><div class="project"><div class="project-tag">CLINICAL DATA</div><div><h3>Long-Term Care Informatics</h3><p>Methods for extracting, standardizing, and analyzing longitudinal clinical data in older adult populations.</p></div></div></div></section>
-<section id="publications"><div class="container"><div class="section-label">// scholarship</div><h2>Selected Publications</h2><div class="publication"><strong>TA-RNN: an attention-based time-aware recurrent neural network architecture for electronic health records</strong><span>Bioinformatics · 2024</span></div><div class="publication"><strong>PPAD: a deep learning architecture to predict progression of Alzheimer's disease</strong><span>Bioinformatics · 2023</span></div><div class="publication"><strong>CAAT-EHR: Cross-Attentional Autoregressive Transformer for Multimodal Electronic Health Record Embeddings</strong><span>arXiv preprint · 2025</span></div><p class="note" style="margin-top:24px">For a more complete and updated publication list, visit <a href="https://scholar.google.com/citations?user=waVA4f0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p></div></section>
-<section id="contact"><div class="container"><div class="section-label">// contact</div><h2>Get in Touch</h2><p class="note">For research collaborations and academic inquiries:</p><p class="contact-email"><a href="mailto:mohammadalolaimat@usf.edu">mohammadalolaimat@usf.edu</a></p><div class="social"><a href="https://www.linkedin.com/in/mohammad-al-olaimat-b0a17bb2" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="Mohammad_Al_Olaimat_CV.docx" download>Download CV ↓</a></div></div></section>
-<footer><div class="container">© 2026 Mohammad Al Olaimat</div></footer>
-</body></html>
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <div class="container nav-inner">
+            <a class="brand" href="#top">Mohammad Al Olaimat</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== ABOUT / PROFILE ===== -->
+    <header class="hero" id="top">
+        <div class="container hero-grid">
+            <div id="about">
+                <div class="eyebrow">// AI · Biomedical Informatics · Aging</div>
+                <h1>Mohammad<br>Al Olaimat, PhD</h1>
+                <p class="subtitle">Assistant Research Professor</p>
+                <p class="affiliation">University of South Florida · Bellini College of AI, Cybersecurity &amp; Computing · CITA</p>
+                <p class="intro">
+                    I develop AI and biomedical informatics methods for multimodal health data,
+                    real-world clinical data, aging, and Alzheimer's disease and related dementias.
+                    My work spans computational phenotyping, longitudinal EHR modeling, and
+                    machine learning for biomedical discovery.
+                </p>
+
+                <!-- Update these links when your profiles or CV change. -->
+                <div class="social">
+                    <a href="https://scholar.google.com/citations?user=waVA4f0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+                    <!-- Replace this placeholder with your actual ORCID URL when available. -->
+                    <span class="unavailable" title="ORCID profile link to be added">ORCID · coming soon</span>
+                    <a href="Mohammad_Al_Olaimat_CV.docx" download>Download CV ↓</a>
+                    <a href="https://www.linkedin.com/in/mohammad-al-olaimat-b0a17bb2" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="mailto:mohammadalolaimat@usf.edu">Email ↗</a>
+                </div>
+            </div>
+
+            <img class="profile-photo" src="mohammad.jpeg" alt="Portrait of Mohammad Al Olaimat">
+        </div>
+    </header>
+
+    <!-- ===== RESEARCH AREAS ===== -->
+    <section id="research">
+        <div class="container">
+            <div class="section-label">// research</div>
+            <h2>Research Areas</h2>
+            <div class="research-grid">
+                <article class="card">
+                    <div class="number">01</div>
+                    <h3>AI for Aging &amp; AD/ADRD</h3>
+                    <p>Computational methods to investigate cognitive impairment, Alzheimer's disease, and aging-related health trajectories.</p>
+                </article>
+                <article class="card">
+                    <div class="number">02</div>
+                    <h3>Multimodal Health Data</h3>
+                    <p>Integration of EHRs, imaging, biomarkers, genetics, and omics for biomedical research.</p>
+                </article>
+                <article class="card">
+                    <div class="number">03</div>
+                    <h3>Computational Phenotyping</h3>
+                    <p>Clinical data harmonization, intrinsic capacity phenotyping, and longitudinal analysis of real-world data.</p>
+                </article>
+                <article class="card">
+                    <div class="number">04</div>
+                    <h3>Machine Learning &amp; Deep Learning</h3>
+                    <p>Transformers, graph neural networks, recurrent networks, and language-based methods for clinical data.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESEARCH PROJECTS ===== -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-label">// selected work</div>
+            <h2>Research Projects</h2>
+            <div class="project">
+                <div class="project-tag">AGING / EHR</div>
+                <div>
+                    <h3>Intrinsic Capacity Phenotyping</h3>
+                    <p>Developing clinically grounded computational measures of intrinsic capacity from real-world long-term care data.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-tag">MULTIMODAL AI</div>
+                <div>
+                    <h3>ADNI &amp; HABS-HD Research</h3>
+                    <p>Analyzing clinical, cognitive, biomarker, imaging, and molecular data across aging research cohorts.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-tag">CLINICAL DATA</div>
+                <div>
+                    <h3>Long-Term Care Informatics</h3>
+                    <p>Methods for extracting, standardizing, and analyzing longitudinal clinical data in older adult populations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SELECTED PUBLICATIONS ===== -->
+    <section id="publications">
+        <div class="container">
+            <div class="section-label">// scholarship</div>
+            <h2>Selected Publications</h2>
+            <div class="publication">
+                <strong>TA-RNN: an attention-based time-aware recurrent neural network architecture for electronic health records</strong>
+                <span>Bioinformatics · 2024</span>
+            </div>
+            <div class="publication">
+                <strong>PPAD: a deep learning architecture to predict progression of Alzheimer's disease</strong>
+                <span>Bioinformatics · 2023</span>
+            </div>
+            <div class="publication">
+                <strong>CAAT-EHR: Cross-Attentional Autoregressive Transformer for Multimodal Electronic Health Record Embeddings</strong>
+                <span>arXiv preprint · 2025</span>
+            </div>
+            <p class="note publication-note">
+                For a more complete and updated publication list, visit
+                <a href="https://scholar.google.com/citations?user=waVA4f0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-label">// contact</div>
+            <h2>Get in Touch</h2>
+            <p class="note">For research collaborations and academic inquiries:</p>
+            <p class="contact-email">
+                <a href="mailto:mohammadalolaimat@usf.edu">mohammadalolaimat@usf.edu</a>
+            </p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/mohammad-al-olaimat-b0a17bb2" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a href="Mohammad_Al_Olaimat_CV.docx" download>Download CV ↓</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">© 2026 Mohammad Al Olaimat</div>
+    </footer>
+</body>
+</html>
