@@ -224,24 +224,38 @@
         }
 
         /* ===== PUBLICATIONS ===== */
-        .publication {
-            border-top: 1px solid var(--line);
-            padding: 20px 0;
-        }
+        
+/* ===== PUBLICATION LINKS ===== */
 
-        .publication strong {
-            display: block;
-            font-size: 17px;
-        }
+.publication strong a {
+    color: #17212d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
 
-        .publication span {
-            color: var(--muted);
-            font-size: 14px;
-        }
+.publication strong a:hover {
+    color: #165d91;
+    text-decoration: underline;
+}
 
-        .publication-note {
-            margin-top: 24px;
-        }
+.publication strong a::after {
+    content: " ↗";
+    font-size: 13px;
+    color: #165d91;
+}
+
+.publication span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #596677;
+}
+
+.publication-note {
+    margin-top: 28px;
+}
+
 
         /* ===== CONTACT AND FOOTER ===== */
         .contact-email {
@@ -407,6 +421,17 @@
 
         <div class="section-label">// scholarship</div>
         <h2>Selected Publications</h2>
+
+        <!-- Publication 0: 2026 -->
+        <div class="publication">
+            <strong>
+                <a href="https://doi.org/10.64898/2026.07.07.26357403"
+                   target="_blank" rel="noopener noreferrer">
+                    Projecting EMS Workforce Demand in an Aging State: A Florida Forecast Through 2035
+                </a>
+            </strong>
+            <span>medRxiv preprint · 2026</span>
+        </div>
 
         <!-- Publication 1: 2026 -->
         <div class="publication">
