@@ -308,6 +308,41 @@
                 letter-spacing: -1.5px;
             }
         }
+        
+/* ===== RESEARCH AREA IMAGES ===== */
+
+.research-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+/* Keep research cards consistently aligned */
+
+.research-grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Research card title spacing */
+
+.research-grid .card h3 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* Responsive images for mobile devices */
+
+@media (max-width: 800px) {
+    .research-image {
+        aspect-ratio: 16 / 9;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -325,93 +360,369 @@
         </div>
     </nav>
 
-    <!-- ===== ABOUT / PROFILE ===== -->
-    <header class="hero" id="top">
-        <div class="container hero-grid">
-            <div id="about">
-                <div class="eyebrow">// AI · Biomedical Informatics · Aging</div>
-                <h1>Mohammad Al Olaimat, PhD</h1>
-                <p class="subtitle">Assistant Research Professor</p>
-                <p class="affiliation">University of South Florida · Bellini College of AI, Cybersecurity &amp; Computing · CITA</p>
-                <p class="intro">
-                    I develop AI and biomedical informatics methods for multimodal health data,
-                    real-world clinical data, aging, and Alzheimer's disease and related dementias.
-                    My work spans computational phenotyping, longitudinal EHR modeling, and
-                    machine learning for biomedical discovery.
+    
+<!-- ===== ABOUT / PROFILE ===== -->
+
+<header class="hero" id="top">
+    <div class="container hero-grid">
+
+        <div id="about">
+
+            <div class="eyebrow">
+                // AI · Biomedical Informatics · Computational Biology
+            </div>
+
+            <h1>Mohammad Al Olaimat, PhD</h1>
+
+            <p class="subtitle">
+                Assistant Research Professor
+            </p>
+
+            <p class="affiliation">
+                University of South Florida ·
+                Bellini College of Artificial Intelligence,
+                Cybersecurity &amp; Computing ·
+                Center for Innovation, Technology, and Aging (CITA)
+            </p>
+
+            <p class="intro">
+                I am an Assistant Research Professor at the University
+                of South Florida, specializing in artificial intelligence,
+                biomedical informatics, and computational biology.
+                My research focuses on developing machine learning
+                and deep learning methods for multimodal biomedical
+                data integration, electronic health record analysis,
+                computational phenotyping, and predictive modeling,
+                with applications in aging, Alzheimer's disease and
+                related dementias (AD/ADRD), and precision medicine.
+            </p>
+
+            <!-- Academic and Professional Links -->
+
+            <div class="social">
+
+                <a href="https://scholar.google.com/citations?user=waVA4f0AAAAJ&amp;hl=en&amp;oi=ao"
+                   target="_blank" rel="noopener noreferrer">
+                    Google Scholar ↗
+                </a>
+
+                <a href="https://orcid.org/0000-0002-4239-8323"
+                   target="_blank" rel="noopener noreferrer">
+                    ORCID ↗
+                </a>
+
+                <a href="Mohammad_Al_Olaimat_CV.pdf" download>
+                    Download CV ↓
+                </a>
+
+                <a href="https://www.linkedin.com/in/mohammad-al-olaimat-%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-b0a17bb2/"
+                   target="_blank" rel="noopener noreferrer">
+                    LinkedIn ↗
+                </a>
+
+                <a href="mailto:mohammadalolaimat@usf.edu">
+                    Email ↗
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Profile Photo -->
+
+        <img
+            class="profile-photo"
+            src="mohammad.jpeg"
+            alt="Portrait of Mohammad Al Olaimat"
+        >
+
+    </div>
+</header>
+
+
+    
+<!-- ===== RESEARCH AREAS ===== -->
+
+<section id="research">
+    <div class="container">
+
+        <div class="section-label">// research</div>
+        <h2>Research Areas</h2>
+
+        <div class="research-grid">
+
+            <!-- Research Area 1 -->
+            <article class="card">
+
+                <img
+                    class="research-image"
+                    src="AI-Powered Neuroscience and Aging Research.png"
+                    alt="AI and biomedical informatics research"
+                    loading="lazy"
+                >
+
+                <div class="number">01</div>
+
+                <h3>
+                    Artificial Intelligence &amp; Biomedical Informatics
+                </h3>
+
+                <p>
+                    Developing AI-driven computational methods for
+                    analyzing complex biomedical and clinical data,
+                    with applications in aging, Alzheimer's disease
+                    and related dementias (AD/ADRD), and precision
+                    medicine.
                 </p>
 
-                <!-- Update these links when your profiles or CV change. -->
-                <div class="social">
-                    <a href="https://scholar.google.com/citations?user=waVA4f0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
-                    <a href="https://orcid.org/0000-0002-4239-8323" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
-                    <a href="Mohammad_Al_Olaimat_CV.pdf" download>Download CV ↓</a>
-                    <a href="https://www.linkedin.com/in/mohammad-al-olaimat-%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA-b0a17bb2/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-                    <a href="mailto:mohammadalolaimat@usf.edu">Email ↗</a>
-                </div>
+            </article>
+
+            <!-- Research Area 2 -->
+            <article class="card">
+
+                <img
+                    class="research-image"
+                    src="Connected Brain MRI Medical Network-2.png"
+                    alt="Multimodal biomedical data integration"
+                    loading="lazy"
+                >
+
+                <div class="number">02</div>
+
+                <h3>
+                    Multimodal AI &amp; Data Integration
+                </h3>
+
+                <p>
+                    Integrating electronic health records,
+                    clinical notes, neuroimaging, molecular
+                    biomarkers, genetics, and omics data
+                    to investigate disease mechanisms,
+                    progression, and clinical outcomes.
+                </p>
+
+            </article>
+
+            <!-- Research Area 3 -->
+            <article class="card">
+
+                <img
+                    class="research-image"
+                    src="Health Analytics Timeline Infographic-3.png"
+                    alt="Clinical data and longitudinal health analytics"
+                    loading="lazy"
+                >
+
+                <div class="number">03</div>
+
+                <h3>
+                    Computational Phenotyping &amp;
+                    Real-World Health Data
+                </h3>
+
+                <p>
+                    Developing methods for clinical data
+                    harmonization, intrinsic capacity
+                    phenotyping, information extraction,
+                    and longitudinal analysis of real-world
+                    healthcare data, particularly in aging
+                    and long-term care populations.
+                </p>
+
+            </article>
+
+            <!-- Research Area 4 -->
+            <article class="card">
+
+                <img
+                    class="research-image"
+                    src="Unified Neural Network Architecture Illustration.png"
+                    alt="Machine learning and deep learning architectures"
+                    loading="lazy"
+                >
+
+                <div class="number">04</div>
+
+                <h3>
+                    Machine Learning &amp; Deep Learning
+                </h3>
+
+                <p>
+                    Designing and applying advanced machine
+                    learning architectures, including
+                    Transformers, graph neural networks (GNNs),
+                    and recurrent neural networks (RNNs),
+                    for representation learning, predictive
+                    modeling, and high-dimensional biomedical
+                    data analysis.
+                </p>
+
+            </article>
+
+            <!-- Research Area 5 -->
+            <article class="card">
+
+                <img
+                    class="research-image"
+                    src="Blue Teal Genomics Illustration-5.png"
+                    alt="Computational biology and bioinformatics"
+                    loading="lazy"
+                >
+
+                <div class="number">05</div>
+
+                <h3>
+                    Computational Biology &amp; Bioinformatics
+                </h3>
+
+                <p>
+                    Applying computational and AI-based
+                    approaches to genomic, transcriptomic,
+                    proteomic, and epigenomic data to
+                    investigate biological mechanisms
+                    and identify disease-associated biomarkers.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+    
+<!-- ===== RESEARCH PROJECTS ===== -->
+
+<section id="projects">
+    <div class="container">
+
+        <div class="section-label">// selected work</div>
+        <h2>Research Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+
+            <div class="project-tag">AGING / AD-ADRD</div>
+
+            <div>
+                <h3>AI-Enabled Intrinsic Capacity Phenotyping</h3>
+
+                <p>
+                    Developing clinically grounded computational
+                    approaches to derive multidomain intrinsic
+                    capacity measures from real-world electronic
+                    health records and longitudinal aging data,
+                    with applications in aging and AD/ADRD research.
+                </p>
             </div>
 
-            <img class="profile-photo" src="mohammad.jpeg" alt="Portrait of Mohammad Al Olaimat">
         </div>
-    </header>
 
-    <!-- ===== RESEARCH AREAS ===== -->
-    <section id="research">
-        <div class="container">
-            <div class="section-label">// research</div>
-            <h2>Research Areas</h2>
-            <div class="research-grid">
-                <article class="card">
-                    <div class="number">01</div>
-                    <h3>AI for Aging &amp; AD/ADRD</h3>
-                    <p>Computational methods to investigate cognitive impairment, Alzheimer's disease, and aging-related health trajectories.</p>
-                </article>
-                <article class="card">
-                    <div class="number">02</div>
-                    <h3>Multimodal Health Data</h3>
-                    <p>Integration of EHRs, imaging, biomarkers, genetics, and omics for biomedical research.</p>
-                </article>
-                <article class="card">
-                    <div class="number">03</div>
-                    <h3>Computational Phenotyping</h3>
-                    <p>Clinical data harmonization, intrinsic capacity phenotyping, and longitudinal analysis of real-world data.</p>
-                </article>
-                <article class="card">
-                    <div class="number">04</div>
-                    <h3>Machine Learning &amp; Deep Learning</h3>
-                    <p>Transformers, graph neural networks, recurrent networks, and language-based methods for clinical data.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+        <!-- Project 2 -->
+        <div class="project">
 
-    <!-- ===== RESEARCH PROJECTS ===== -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-label">// selected work</div>
-            <h2>Research Projects</h2>
-            <div class="project">
-                <div class="project-tag">AGING / EHR</div>
-                <div>
-                    <h3>Intrinsic Capacity Phenotyping</h3>
-                    <p>Developing clinically grounded computational measures of intrinsic capacity from real-world long-term care data.</p>
-                </div>
+            <div class="project-tag">MULTIMODAL AI</div>
+
+            <div>
+                <h3>Multimodal AI for Alzheimer's Disease Research</h3>
+
+                <p>
+                    Developing and applying machine learning
+                    methods to integrate clinical, cognitive,
+                    neuroimaging, molecular biomarker, genetic,
+                    and omics data from large-scale research
+                    cohorts, including ADNI and HABS-HD.
+                </p>
             </div>
-            <div class="project">
-                <div class="project-tag">MULTIMODAL AI</div>
-                <div>
-                    <h3>ADNI &amp; HABS-HD Research</h3>
-                    <p>Analyzing clinical, cognitive, biomarker, imaging, and molecular data across aging research cohorts.</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-tag">CLINICAL DATA</div>
-                <div>
-                    <h3>Long-Term Care Informatics</h3>
-                    <p>Methods for extracting, standardizing, and analyzing longitudinal clinical data in older adult populations.</p>
-                </div>
-            </div>
+
         </div>
-    </section>
+
+        <!-- Project 3 -->
+        <div class="project">
+
+            <div class="project-tag">EHR / DEEP LEARNING</div>
+
+            <div>
+                <h3>Longitudinal Electronic Health Record Modeling</h3>
+
+                <p>
+                    Developing time-aware deep learning and
+                    representation learning architectures for
+                    multimodal EHR data, addressing irregular
+                    temporal intervals, patient-specific
+                    trajectories, and future clinical outcome
+                    prediction.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+
+            <div class="project-tag">CLINICAL INFORMATICS</div>
+
+            <div>
+                <h3>AI for Real-World Long-Term Care Data</h3>
+
+                <p>
+                    Applying biomedical informatics, natural
+                    language processing, and AI methods to
+                    clinical information extraction, data
+                    standardization, computational phenotyping,
+                    and health outcomes research in older
+                    adult and long-term care populations.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project">
+
+            <div class="project-tag">BIOINFORMATICS / OMICS</div>
+
+            <div>
+                <h3>
+                    Computational Analysis of Multimodal
+                    Biomarkers and Omics
+                </h3>
+
+                <p>
+                    Investigating genomic, transcriptomic,
+                    proteomic, epigenomic, and molecular
+                    biomarker data using computational and
+                    AI-based approaches to study disease
+                    mechanisms and identify biomarkers
+                    associated with aging and AD/ADRD.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project">
+
+            <div class="project-tag">HEALTHCARE ANALYTICS</div>
+
+            <div>
+                <h3>EMS Workforce Demand Forecasting</h3>
+
+                <p>
+                    Contributing to data-driven forecasting
+                    of emergency medical services workforce
+                    demand in Florida, examining future
+                    healthcare resource needs in the context
+                    of population aging.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 
    
 <!-- ===== SELECTED PUBLICATIONS ===== -->
